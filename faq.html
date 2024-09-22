@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important FAQ</title>
+       <!-- Tailwind and Daisy UI link -->
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+       <script src="https://cdn.tailwindcss.com"></script>
+       <!-- google fonts -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+       <!-- font awesome -->
+       <script src="https://kit.fontawesome.com/f1872612b9.js" crossorigin="anonymous"></script>
+       <!-- customizing styles -->
+       <script>
+           tailwind.config = {
+             theme: {
+               extend: {
+                 colors: {
+                   primary: '#B4F461',
+                   secondary: '#1111114D',
+                 }
+               }
+             }
+           }
+         </script>
+         <!-- css styles -->
+       <style>
+           .font{
+           font-family: "Lexend", sans-serif;
+           font-style: normal;
+         }
+       </style>
+</head>
+<body class="font container mx-auto">
+    <!-- nav section -->
+    <header class="bg-[#F9F7F3] px-4 lg:px-24">
+        <div class="navbar py-5">
+            <div class="navbar-start">
+              <button onclick="homeHandler()" class="btn btn-md border-secondary hover:bg-primary text-lg">Home</button>
+            </div>
+            <div class="navbar-center lg:flex gap-3">
+                <img class="w-6" src="./assets/logo.png" alt="logo">
+                <span class="hidden font-bold md:flex">Donate Bangladesh</span>
+            </div>
+            <div class="navbar-end">
+              <i class="fa-solid fa-file-invoice-dollar text-yellow-400"></i>
+              <span class="ml-2 mr-2">5500</span>BDT</p>
+            </div>
+          </div>
+    </header>
+    <!-- main section -->
+     <main class="px-4 lg:px-24">
+       <section class="mt-16 mb-40">
+        <div class="text-4xl font-bold my-10">
+            <h1>
+                Important FAQ
+                <i class="fa-regular fa-circle-question"></i>
+            </h1>
+        </div>
+        <div class="space-y-4">
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">How can I donate to help flood victims in Bangladesh?
+                </div>
+                <div class="collapse-content">
+                  <p>You can donate to trusted organizations that are actively working to provide relief during floods in Bangladesh. This includes both international charities like UNICEF, Red Crescent Society, and local NGOs like BRAC, which have established programs for disaster relief. Donations can often be made online through their websites via credit cards, bank transfers, or mobile payment platforms like bKash or Nagad.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What kind of donations are most needed during a flood crisis?</div>
+                <div class="collapse-content">
+                  <p>During floods, essential donations include:
+                    Emergency food supplies (rice, lentils, dried food),
+                    Clean drinking water and water purification tablets,
+                    Hygiene products (soaps, sanitary pads, diapers),
+                    Temporary shelter materials (tents, tarpaulins, blankets),
+                    Medical supplies (basic first aid kits, medicine for waterborne diseases), Financial donations are also critical as they allow organizations to buy and distribute exactly what is needed.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How can I ensure my donation reaches those in need?</div>
+                <div class="collapse-content">
+                  <p>To ensure your donation reaches the people most affected by floods, donate through established and reputable organizations that have a presence in Bangladesh and are experienced in disaster response. Check for organizations that provide transparency on how donations are used, and look for third-party verification, such as reports from independent charity watchdogs or local media. Avoid unverified crowdfunding campaigns unless you know the organizer personally.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Are there government programs in Bangladesh that support flood victims?</div>
+                <div class="collapse-content">
+                  <p>Yes, the Government of Bangladesh has emergency relief programs in place during floods, including the distribution of food, water, and temporary shelters. However, due to the scale of the disaster, support from local and international donors is essential to meet the full range of needs. Donating to reputable relief agencies ensures that help reaches areas that government programs might not cover immediately.</p>
+                </div>
+              </div>
+        </div>
+       </section>
+     </main>
+
+     <!-- scripts -->
+      <script src="./js/index.js"></script>
+</body>
+</html>

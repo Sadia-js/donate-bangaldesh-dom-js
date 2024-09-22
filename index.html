@@ -20,6 +20,7 @@
             extend: {
               colors: {
                 primary: '#B4F461',
+                secondary: '#1111114D',
               }
             }
           }
@@ -31,14 +32,20 @@
         font-family: "Lexend", sans-serif;
         font-style: normal;
       }
+      .glass {
+        background-color: rgba(255, 255, 255, 0.1); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255, 255, 255, 0.2); 
+        border-radius: 10px;
+}
     </style>
       
 </head>
-<body class="font">
-    <header class="bg-[#F9F7F3] container px-4 lg:px-24">
+<body class="font container mx-auto">
+    <header class="glass px-4 lg:px-24 sticky w-[100%] z-50 top-0 left-0 pb-5">
         <div class="navbar py-5">
             <div class="navbar-start">
-              <a class="btn btn-md border-[#1111114D] hover:bg-primary text-lg">Blog</a>
+              <button onclick="blogHandler()" class="btn btn-md border-secondary hover:bg-primary text-lg">Blog</button>
             </div>
             <div class="navbar-center lg:flex gap-3">
                 <img class="w-6" src="./assets/logo.png" alt="logo">
@@ -46,18 +53,78 @@
             </div>
             <div class="navbar-end">
               <i class="fa-solid fa-file-invoice-dollar text-yellow-400"></i>
-              <span class="ml-2 mr-2">5500</span>BDT</p>
+              <span id="needed-amount" class="ml-2 mr-2">5500</span>BDT</p>
             </div>
-          </div>
-    </header>
-    <main class="ontainer px-4 lg:px-24">
+        </div>
         <!-- toggled buttons sections -->
-         <section>
-            <div class="flex flex-col px-20 md:flex-row md:justify-center gap-4 mt-10">
-                <button class="btn btn-md border-[#1111114D] hover:bg-primary">Donation</button>
-                <button class="btn btn-md border-[#1111114D] hover:bg-primary">History</button>
+        <div class="flex flex-col px-20 md:flex-row md:justify-center gap-4">
+            <button class="btn btn-md border-secondary hover:bg-primary">Donation</button>
+            <button class="btn btn-md border-secondary hover:bg-primary">History</button>
+        </div>
+    </header>
+    <main class="px-4 lg:px-24">
+         <!-- cards campaign here -->
+          <section>
+            <div class="grid grid-cols-1 gap-6 mt-10">
+                <!-- campaign-1 -->
+                <div class="border-2 hero-content flex-col lg:flex-row shadow-sm rounded-lg">
+                  <img
+                    src="./assets/noakhali.png"
+                    class="rounded-lg shadow-lg" />
+                  <div class="mt-4 md:mt-0 space-y-3">
+                    <button class="btn btn-small">
+                        <i class="fa-solid fa-file-invoice-dollar text-yellow-400"></i>
+                        <span id="campaign1-amount">0</span>BDT
+                    </button>
+                    <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="py-3">
+                        The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.                    
+                    </p>
+                    <input id="donate-noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <p id="invalid1" class="hidden">Invalid Number</p>
+                    <button id="donate-btn" class="w-full btn border-secondary hover:bg-primary">Donate Now</button>
+                  </div>
+                </div>
+                <!-- campaign-2 -->
+                <div class="border-2 hero-content flex-col lg:flex-row shadow-sm rounded-lg">
+                  <img
+                    src="./assets/feni.png"
+                    class="rounded-lg shadow-lg" />
+                  <div class="mt-4 md:mt-0 space-y-3">
+                    <button class="btn btn-small">
+                        <i class="fa-solid fa-file-invoice-dollar text-yellow-400"></i>
+                        <span>0</span>BDT
+                    </button>
+                    <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="py-3">
+                        The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.                    </p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button class="w-full btn border-secondary hover:bg-primary">Donate Now</button>
+                  </div>
+                </div>
+                <!-- campaign-3 -->
+                <div class="border-2 hero-content flex-col lg:flex-row shadow-sm rounded-lg">
+                  <img
+                    src="./assets/quota-protest.png"
+                    class="rounded-lg shadow-lg" />
+                  <div class="mt-4 md:mt-0 space-y-3">
+                    <button class="btn btn-small">
+                        <i class="fa-solid fa-file-invoice-dollar text-yellow-400"></i>
+                        <span>0</span>BDT
+                    </button>
+                    <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="py-3">
+                        The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.                    </p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button class="w-full btn border-secondary hover:bg-primary">Donate Now</button>
+                  </div>
+                </div>
             </div>
-         </section>
+          </section>
     </main>
+
+    <!-- scripts -->
+     <script src="./js/utilities.js"></script>
+     <script src="./js/index.js"></script>
 </body>
 </html>
