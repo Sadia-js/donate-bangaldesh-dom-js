@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- Tailwind and Daisy UI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/f1872612b9.js" crossorigin="anonymous"></script>
+    <!-- customizing styles -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#B4F461',
+              }
+            }
+          }
+        }
+      </script>
+      <!-- css styles -->
+    <style>
+        .font{
+        font-family: "Lexend", sans-serif;
+        font-style: normal;
+      }
+    </style>
+      
+</head>
+<body class="font">
+    <header class="bg-[#F9F7F3] container px-4 lg:px-24">
+        <div class="navbar py-5">
+            <div class="navbar-start">
+              <a class="btn btn-md border-[#1111114D] hover:bg-primary text-lg">Blog</a>
+            </div>
+            <div class="navbar-center lg:flex gap-3">
+                <img class="w-6" src="./assets/logo.png" alt="logo">
+                <span class="hidden font-bold md:flex">Donate Bangladesh</span>
+            </div>
+            <div class="navbar-end">
+              <i class="fa-solid fa-file-invoice-dollar text-yellow-400"></i>
+              <span class="ml-2 mr-2">5500</span>BDT</p>
+            </div>
+          </div>
+    </header>
+    <main class="ontainer px-4 lg:px-24">
+        <!-- toggled buttons sections -->
+         <section>
+            <div class="flex flex-col px-20 md:flex-row md:justify-center gap-4 mt-10">
+                <button class="btn btn-md border-[#1111114D] hover:bg-primary">Donation</button>
+                <button class="btn btn-md border-[#1111114D] hover:bg-primary">History</button>
+            </div>
+         </section>
+    </main>
+</body>
+</html>
