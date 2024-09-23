@@ -7,6 +7,8 @@
        <!-- Tailwind and Daisy UI link -->
        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
        <script src="https://cdn.tailwindcss.com"></script>
+       <!-- font awesome -->
+       <script src="https://kit.fontawesome.com/f1872612b9.js" crossorigin="anonymous"></script>
        <!-- google fonts -->
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,18 +42,18 @@
 <body class="font">
     <!-- nav section -->
     <header class="glass w-full">
-      <div class="container mx-auto navbar py-4 text-lg px-4 lg:px-24">
-          <div class="navbar-start">
-            <a href="index.html" id="home-btn" class="btn btn-sm md:btn-md bg-primary md:text-lg hover:bg-lime-200">Home</a>
-          </div>
-          <div class="navbar-center lg:flex gap-3">
-              <img class="w-[30px]" src="./assets/logo.png" alt="logo">
-              <span class="hidden font-bold md:flex">Donate Bangladesh</span>
-          </div>
-          <div class="navbar-end font-bold">
-            <img class="w-5" src="./assets/coin.png" alt="coin">
-            <span class="ml-2 mr-2">5500</span>BDT</p>
-          </div>
+      <div class="container mx-auto p-4 lg:px-24 flex justify-between gap-6 items-center">
+        <div>
+          <a href="index.html" id="blog-btn" class="btn btn-sm md:btn-md bg-primary hover:bg-lime-200 md:text-lg">Home</a>
+        </div>
+        <div class="flex justify-center items-center gap-3">
+            <img class="w-[30px]" src="./assets/logo.png" alt="logo">
+            <span class="hidden text-2xl font-bold md:flex">Donate Bangladesh</span>
+        </div>
+        <div class="flex items-center font-bold">
+          <img class="w-5" src="./assets/coin.png" alt="coin">
+          <span id="needed-amount" class="ml-2 mr-2 md:text-xl">5500</span>BDT</p>
+        </div>
       </div>
     </header>
     <!-- main section -->

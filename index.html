@@ -43,27 +43,27 @@
 <body class="font">
     <header class="glass sticky w-full z-50 top-0 left-0">
      <div>
-        <div class="container mx-auto navbar py-4  px-4 lg:px-24 text-lg">
-            <div class="navbar-start">
+        <div class="container mx-auto p-4 lg:px-24 flex justify-between items-center gap-6">
+            <div>
               <a href="blog.html" id="home-btn" class="btn btn-sm md:btn-md bg-primary hover:bg-lime-200 md:text-lg">Blog</a>
             </div>
-            <div class="navbar-center lg:flex gap-3">
+            <div class="flex justify-center items-center gap-3">
                 <img class="w-[30px]" src="./assets/logo.png" alt="logo">
-                <span class="hidden font-bold md:flex">Donate Bangladesh</span>
+                <span class="hidden text-2xl font-bold md:flex">Donate Bangladesh</span>
             </div>
-            <div class="navbar-end font-bold">
+            <div class="flex items-center font-bold">
               <img class="w-5" src="./assets/coin.png" alt="coin">
-              <span id="needed-amount" class="ml-2 mr-2">5500</span>BDT</p>
+              <span id="needed-amount" class="ml-2 mr-2 md:text-xl">5500</span>BDT</p>
             </div>
         </div>
      </div>
         <!-- toggled buttons sections -->
-        <div class="flex justify-center gap-8 pb-4">
+        <div class="flex justify-center gap-8 py-4">
             <button id="donation-btn" onclick="donationBtn()" class="btn btn-sm md:btn-md bg-primary hover:bg-lime-200">Donation</button>
             <button id="history-btn" onclick="historyBtn()" class="btn btn-sm md:btn-md">History</button>
         </div>
     </header>
-    <main class="container mx-auto px-4 lg:px-24">
+    <main class="container mx-auto px-4 lg:px-24 mb-24">
          <!-- cards campaign here -->
           <section id="campaign-cards">
             <div class="grid grid-cols-1 gap-6 mt-10">
@@ -215,7 +215,7 @@
           </section>
     </main>
 
-  <footer id="history-container" class="hidden container mx-auto px-4 lg:px-24 my-10">
+  <footer id="history-container" class="hidden container mx-auto px-4 lg:px-24 mb-24">
            <!-- history container section-->
            <div id="history-container1">
               <!-- <div>
@@ -235,7 +235,7 @@
                 <p class="text-base font-medium"></p>
             </div> -->
           </div>
-    </footer>
+  </footer>
 
     <!-- scripts -->
      <script src="./js/utilities.js"></script>
