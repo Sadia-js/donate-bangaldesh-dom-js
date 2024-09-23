@@ -9,7 +9,7 @@ let total = 5500;
 document.getElementById('donate-btn').addEventListener('click', function(){
     const totalBalance = getTextValueById('needed-amount');
     const getMoney = getInputFieldValueById('donate-noakhali');
-    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
+    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney <= totalBalance){
   
         // add money
         const campaign1 = getTextValueById('campaign1-amount');
@@ -44,7 +44,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
 document.getElementById('donate-btn2').addEventListener('click', function(){
     const totalBalance = getTextValueById('needed-amount');
     const getMoney = getInputFieldValueById('donate-feni');
-    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
+    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney <= totalBalance){
 
         // add money
         const campaign2 = getTextValueById('campaign2-amount');
@@ -78,7 +78,7 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
 document.getElementById('donate-btn3').addEventListener('click', function(){
     const totalBalance = getTextValueById('needed-amount');
     const getMoney = getInputFieldValueById('donate-quota');
-    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
+    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney <= totalBalance){
         // add money
         const campaign3 = getTextValueById('campaign3-amount');
         const add = campaign3 + getMoney;
@@ -113,7 +113,9 @@ document.getElementById('donate-btn3').addEventListener('click', function(){
 // history button triggered
 function historyBtn(){
     document.getElementById('history-btn').classList.add('bg-primary');
-    document.getElementById('donation-btn').classList.remove('bg-primary');
+    document.getElementById('history-btn').classList.add('hover:bg-lime-200');
+    document.getElementById('donation-btn').classList.remove('bg-primary');    
+    document.getElementById('donation-btn').classList.remove('hover:bg-lime-200');    
     hideScreen('campaign-cards')
     showScreen('history-container');
 }
@@ -121,7 +123,9 @@ function historyBtn(){
 // donation button triggered
 function donationBtn(){
     document.getElementById('history-btn').classList.remove('bg-primary');
+    document.getElementById('history-btn').classList.remove('hover:bg-lime-200');
     document.getElementById('donation-btn').classList.add('bg-primary');
+    document.getElementById('donation-btn').classList.add('hover:bg-lime-200');
     hideScreen('history-container');
     showScreen('campaign-cards')
 }

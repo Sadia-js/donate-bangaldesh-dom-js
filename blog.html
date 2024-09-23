@@ -30,21 +30,25 @@
            font-family: "Lexend", sans-serif;
            font-style: normal;
          }
-
+         .glass {
+        background-color: rgba(255, 255, 255, 0.1); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255, 255, 255, 0.2); 
+      }
        </style>
 </head>
 <body class="font">
     <!-- nav section -->
-    <header class="bg-[#faf8f0]">
-      <div class="container mx-auto navbar py-5  px-4 lg:px-24">
+    <header class="glass w-full">
+      <div class="container mx-auto navbar py-4 text-lg px-4 lg:px-24">
           <div class="navbar-start">
-            <a href="index.html" id="home-btn" class="btn btn-sm md:btn-md border-secondary bg-primary md:text-lg">Home</a>
+            <a href="index.html" id="home-btn" class="btn btn-sm md:btn-md bg-primary md:text-lg hover:bg-lime-200">Home</a>
           </div>
           <div class="navbar-center lg:flex gap-3">
               <img class="w-[30px]" src="./assets/logo.png" alt="logo">
               <span class="hidden font-bold md:flex">Donate Bangladesh</span>
           </div>
-          <div class="navbar-end">
+          <div class="navbar-end font-bold">
             <img class="w-5" src="./assets/coin.png" alt="coin">
             <span class="ml-2 mr-2">5500</span>BDT</p>
           </div>
