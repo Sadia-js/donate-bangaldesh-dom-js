@@ -15,15 +15,7 @@ function getTextValueById(id){
 // set value inside the element by Id
 let count = 0;
 function setTextElementById(id, balance){
-    if(isNaN(balance) || balance < 0){
-        alert('invalid! Enter digits please');
-        return;
-     }
      count += balance
     document.getElementById(id).innerText = count;
 }
 
-// show the hide screen
-function showScreen(id){
-    document.getElementById(id).classList.remove('hidden');
-}

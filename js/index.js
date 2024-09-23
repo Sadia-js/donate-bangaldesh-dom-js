@@ -1,31 +1,70 @@
-// After triggered blog button will take you up the another html page
-function blogHandler(){
-    window.location.href = "../faq.html";
-}
+const totalBalance = getTextValueById('needed-amount');
 
-// After triggered home button will take you up the Home page
-function homeHandler(){
-    window.location.href = "../index.html";
-}
-
-// getInputField Value By Id
+// For campaign-1 card
 document.getElementById('donate-btn').addEventListener('click', function(){
+    const getMoney = document.getElementById('donate-noakhali').value;
 
-    // add money
-    const donatedMoney = getInputFieldValueById('donate-noakhali');
-    setTextElementById('campaign1-amount', donatedMoney);
-    
-    // Updated Balance
-    const totalBalance = getTextValueById('needed-amount');
-    if(donatedMoney > totalBalance){
-        showScreen('invalid1');
-        return;
-    }
-    else if(donatedMoney > 0){
+    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
+        // add money
+        const donatedMoney = getInputFieldValueById('donate-noakhali');
+        setTextElementById('campaign1-amount', donatedMoney);
+
+        // Updated Balance
         const addMoney = document.getElementById('campaign1-amount').innerText;
         const updatedBalance = totalBalance - addMoney;
         document.getElementById('needed-amount').innerText = updatedBalance;
-        console.log(updatedBalance);
+        document.getElementById('my_modal_5').showModal();   
+        document.getElementById('donate-noakhali').value = '';
     }
-    // console.log(totalBalance)
+    else{
+        alert('Invalid Data');
+        document.getElementById('donate-noakhali').value = '';
+        return;
+    }
+})
+
+// For campaign-2 card
+document.getElementById('donate-btn2').addEventListener('click', function(){
+    const getMoney = document.getElementById('donate-feni').value;
+
+    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
+        // add money
+        const donatedMoney = getInputFieldValueById('donate-feni');
+        setTextElementById('campaign2-amount', donatedMoney);
+
+        // Updated Balance
+        const addMoney = document.getElementById('campaign2-amount').innerText;
+        const updatedBalance = totalBalance - addMoney;
+        document.getElementById('needed-amount').innerText = updatedBalance;
+        document.getElementById('my_modal_5').showModal();   
+        document.getElementById('donate-feni').value = '';
+    }
+    else{
+        alert('Invalid Data');
+        document.getElementById('donate-feni').value = '';
+        return;
+    }
+})
+// For campaign-3 card
+document.getElementById('donate-btn3').addEventListener('click', function(){
+    const getMoney = document.getElementById('donate-quota').value;
+
+    if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
+        // add money
+        const donatedMoney = getInputFieldValueById('donate-quota');
+        setTextElementById('campaign3-amount', donatedMoney);
+
+        // Updated Balance
+        const addMoney = document.getElementById('campaign3-amount').innerText;
+        const updatedBalance = totalBalance - addMoney;
+        document.getElementById('needed-amount').innerText = updatedBalance;
+        document.getElementById('my_modal_5').showModal();   
+        document.getElementById('donate-quota').value = '';
+    }
+    else{
+        alert('Invalid Data');
+        document.getElementById('donate-quota').value = '';
+        return;
+    }
+
 })

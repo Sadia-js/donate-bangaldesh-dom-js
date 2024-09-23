@@ -34,10 +34,10 @@
          }
        </style>
 </head>
-<body class="font container mx-auto">
+<body class="font">
     <!-- nav section -->
-    <header class="bg-[#F9F7F3] px-4 lg:px-24">
-        <div class="navbar py-5">
+    <header class="bg-[#F9F7F3] w-full">
+        <div class="container mx-auto navbar py-5 px-4 lg:px-24">
             <div class="navbar-start">
               <button onclick="homeHandler()" class="btn btn-md border-secondary hover:bg-primary text-lg">Home</button>
             </div>
@@ -49,10 +49,10 @@
               <i class="fa-solid fa-file-invoice-dollar text-yellow-400"></i>
               <span class="ml-2 mr-2">5500</span>BDT</p>
             </div>
-          </div>
+        </div>
     </header>
     <!-- main section -->
-     <main class="px-4 lg:px-24">
+     <main class="container mx-auto px-4 lg:px-24">
        <section class="mt-16 mb-40">
         <div class="text-4xl font-bold my-10">
             <h1>
@@ -63,43 +63,45 @@
         <div class="space-y-4">
             <div class="collapse collapse-arrow border-2">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">How can I donate to help flood victims in Bangladesh?
+                <div class="collapse-title text-xl font-medium"> What is the Document Object Model (DOM)?
                 </div>
                 <div class="collapse-content">
-                  <p>You can donate to trusted organizations that are actively working to provide relief during floods in Bangladesh. This includes both international charities like UNICEF, Red Crescent Society, and local NGOs like BRAC, which have established programs for disaster relief. Donations can often be made online through their websites via credit cards, bank transfers, or mobile payment platforms like bKash or Nagad.</p>
+                  <p>
+                    The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects (nodes), making it possible for programming languages (like JavaScript) to interact with and manipulate the content, structure, and styling of a webpage.
+                  </p>
                 </div>
               </div>
               <div class="collapse collapse-arrow border-2">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">What kind of donations are most needed during a flood crisis?</div>
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                  <p>During floods, essential donations include:
-                    Emergency food supplies (rice, lentils, dried food),
-                    Clean drinking water and water purification tablets,
-                    Hygiene products (soaps, sanitary pads, diapers),
-                    Temporary shelter materials (tents, tarpaulins, blankets),
-                    Medical supplies (basic first aid kits, medicine for waterborne diseases), Financial donations are also critical as they allow organizations to buy and distribute exactly what is needed.</p>
+                  <p>              
+                    To select elements from the DOM: 1. document.getElementById("id"): Selects a single element by its unique ID. 2. document.getElementsByClassName("className"): Selects all elements with the specified class name. 3. document.getElementsByTagName("tagName"): Selects all elements with the specified tag name. 4. document.querySelector("selector"): Selects the first element matching the CSS selector. 5. document.querySelectorAll("selector"): Selects all elements matching the CSS selector.
+                  </p>
                 </div>
               </div>
               <div class="collapse collapse-arrow border-2">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How can I ensure my donation reaches those in need?</div>
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?
+                </div>
                 <div class="collapse-content">
-                  <p>To ensure your donation reaches the people most affected by floods, donate through established and reputable organizations that have a presence in Bangladesh and are experienced in disaster response. Check for organizations that provide transparency on how donations are used, and look for third-party verification, such as reports from independent charity watchdogs or local media. Avoid unverified crowdfunding campaigns unless you know the organizer personally.</p>
+                  <p>Event delegation is a technique where a parent element handles events for its child elements by using a single event listener.It is useful because it relies on event bubbling, where events propagate upwards through the DOM.This approach reduces the need for multiple listeners, improving performance and simplifying code. It also works with dynamically added child elements.</p>
                 </div>
               </div>
               <div class="collapse collapse-arrow border-2">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Are there government programs in Bangladesh that support flood victims?</div>
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                 <div class="collapse-content">
-                  <p>Yes, the Government of Bangladesh has emergency relief programs in place during floods, including the distribution of food, water, and temporary shelters. However, due to the scale of the disaster, support from local and international donors is essential to meet the full range of needs. Donating to reputable relief agencies ensures that help reaches areas that government programs might not cover immediately.</p>
+                  <p>
+                    You can manipulate an element's attributes using setAttribute() and getAttribute() or directly by properties like element.id. For styles, modify the style property (e.g., element.style.backgroundColor = "blue"). Use classList to add, remove, or toggle classes (e.g., element.classList.add("active")). You can also remove attributes using removeAttribute().
+                  </p>
                 </div>
               </div>
-        </div>
+        </div> 
        </section>
      </main>
 
      <!-- scripts -->
-      <script src="./js/index.js"></script>
+      <script src="./js/toogle.js"></script>
 </body>
 </html>
