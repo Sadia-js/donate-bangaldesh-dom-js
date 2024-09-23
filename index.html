@@ -37,19 +37,19 @@
         backdrop-filter: blur(10px); 
         border: 1px solid rgba(255, 255, 255, 0.2); 
         border-radius: 10px;
-}
+      }
     </style>
       
 </head>
 <body class="font">
-    <header class="glass sticky w-full z-50 top-0 left-0 pb-5">
+    <header class="glass sticky w-full z-50 top-0 left-0">
      <div class="bg-[#faf8f0]">
         <div class="container mx-auto navbar py-5  px-4 lg:px-24">
             <div class="navbar-start">
-              <a href="blog.html" id="home-btn" class="btn btn-md border-secondary bg-primary text-lg">Blog</a>
+              <a href="blog.html" id="home-btn" class="btn btn-sm md:btn-md border-secondary bg-primary md:text-lg">Blog</a>
             </div>
             <div class="navbar-center lg:flex gap-3">
-                <img class="w-6" src="./assets/logo.png" alt="logo">
+                <img class="w-[30px]" src="./assets/logo.png" alt="logo">
                 <span class="hidden font-bold md:flex">Donate Bangladesh</span>
             </div>
             <div class="navbar-end">
@@ -59,9 +59,9 @@
         </div>
      </div>
         <!-- toggled buttons sections -->
-        <div class="flex flex-col px-20 md:flex-row md:justify-center gap-4 mt-6">
-            <button id="donation-btn" onclick="donationBtn()" class="btn btn-md border-secondary bg-primary">Donation</button>
-            <button id="history-btn" onclick="historyBtn()" class="btn btn-md border-secondary">History</button>
+        <div class="flex justify-center gap-4 my-3 md:my-4">
+            <button id="donation-btn" onclick="donationBtn()" class="btn btn-sm md:btn-md border-secondary bg-primary">Donation</button>
+            <button id="history-btn" onclick="historyBtn()" class="btn btn-sm md:btn-md border-secondary">History</button>
         </div>
     </header>
     <main class="container mx-auto px-4 lg:px-24">
