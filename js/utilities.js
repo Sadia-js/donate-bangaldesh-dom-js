@@ -19,4 +19,12 @@ function setTextElementById(id, balance){
     document.getElementById(id).innerText = count;
 }
 
+// show screen
+function showScreen(id){
+    document.getElementById(id).classList.remove('hidden');
+}
 
+// hide screen
+function hideScreen(id){
+    document.getElementById(id).classList.add('hidden');
+}
