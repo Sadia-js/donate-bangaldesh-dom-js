@@ -1,22 +1,35 @@
-const totalBalance = getTextValueById('needed-amount');
+const historyContainer = document.getElementById('history-container');
+const history1 = document.getElementById('history-container1');
+const history2 = document.getElementById('history-container2');
+const history3 = document.getElementById('history-container3');
+
+let total = 5500;
 
 // For campaign-1 card
 document.getElementById('donate-btn').addEventListener('click', function(){
-    const getMoney = document.getElementById('donate-noakhali').value;
-
+    const totalBalance = getTextValueById('needed-amount');
+    const getMoney = getInputFieldValueById('donate-noakhali');
     if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
+  
         // add money
-        const donatedMoney = getInputFieldValueById('donate-noakhali');
-        const campaignAmount = getTextValueById('campaign1-amount');
-        const totalDonation = donatedMoney + campaignAmount;
-        setTextElementById('campaign1-amount', totalDonation);
+        const campaign1 = getTextValueById('campaign1-amount');
+        const add = campaign1 + getMoney;
+        setTextElementById('campaign1-amount', add);
 
         // Updated Balance
-        const addMoney = document.getElementById('campaign1-amount').innerText;
-        const updatedBalance = totalBalance - addMoney;
-        document.getElementById('needed-amount').innerText = updatedBalance;
+        total = total - getMoney;
+        document.getElementById('needed-amount').innerText = total;
         document.getElementById('my_modal_1').showModal();   
-        document.getElementById('donate-noakhali').value = '';
+
+        // history
+        const date = new Date();
+        const localDate = date.toString();
+        const div = document.createElement('div');
+        div.innerHTML = `
+           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Flood at Noakhali, Bangladesh</h3>
+           <p class="bg-gray-100 p-3 text-base font-medium mt-3 rounded-lg">${localDate}</p>
+        `
+        history1.insertBefore(div, history1.firstChild);
     }
     else{
         alert('Invalid Data');
@@ -27,21 +40,29 @@ document.getElementById('donate-btn').addEventListener('click', function(){
 
 // For campaign-2 card
 document.getElementById('donate-btn2').addEventListener('click', function(){
-    const getMoney = document.getElementById('donate-feni').value;
-
+    const totalBalance = getTextValueById('needed-amount');
+    const getMoney = getInputFieldValueById('donate-feni');
     if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
-        // add money
-        const donatedMoney = getInputFieldValueById('donate-feni');
-        const campaignAmount = getTextValueById('campaign2-amount');
-        const totalDonation = donatedMoney + campaignAmount;
-        setTextElementById('campaign2-amount', totalDonation);
 
+        // add money
+        const campaign2 = getTextValueById('campaign2-amount');
+        const add = campaign2 + getMoney;
+        setTextElementById('campaign2-amount', add);
+       
         // Updated Balance
-        const addMoney = document.getElementById('campaign2-amount').innerText;
-        const updatedBalance = totalBalance - addMoney;
-        document.getElementById('needed-amount').innerText = updatedBalance;
+        total = total - getMoney;
+        document.getElementById('needed-amount').innerText = total;
         document.getElementById('my_modal_2').showModal();   
-        document.getElementById('donate-feni').value = '';
+
+        // history
+        const date = new Date();
+        const localDate = date.toString();
+        const div = document.createElement('div');
+        div.innerHTML = `
+           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Flood at Feni, Bangladesh</h3>
+           <p class="bg-gray-100 p-3 text-base font-medium mt-3 rounded-lg">${localDate}</p>
+        `
+        history2.insertBefore(div, history2.firstChild);
     }
     else{
         alert('Invalid Data');
@@ -51,21 +72,28 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
 })
 // For campaign-3 card
 document.getElementById('donate-btn3').addEventListener('click', function(){
-    const getMoney = document.getElementById('donate-quota').value;
-
+    const totalBalance = getTextValueById('needed-amount');
+    const getMoney = getInputFieldValueById('donate-quota');
     if(getMoney !== "" && !isNaN(getMoney) && getMoney > 0 && getMoney < totalBalance){
         // add money
-        const donatedMoney = getInputFieldValueById('donate-quota');
-        const campaignAmount = getTextValueById('campaign3-amount');
-        const totalDonation = donatedMoney + campaignAmount;
-        setTextElementById('campaign3-amount', totalDonation);
+        const campaign3 = getTextValueById('campaign3-amount');
+        const add = campaign3 + getMoney;
+        setTextElementById('campaign3-amount', add);
 
         // Updated Balance
-        const addMoney = document.getElementById('campaign3-amount').innerText;
-        const updatedBalance = totalBalance - addMoney;
-        document.getElementById('needed-amount').innerText = updatedBalance;
+        total = total - getMoney;
+        document.getElementById('needed-amount').innerText = total;   
         document.getElementById('my_modal_3').showModal();   
-        document.getElementById('donate-quota').value = '';
+
+        // history
+        const date = new Date();
+        const localDate = date.toString();
+        const div = document.createElement('div');
+        div.innerHTML = `
+           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Flood at Quota, Bangladesh</h3>
+           <p class="bg-gray-100 p-3 text-base font-medium mt-3 rounded-lg">${localDate}</p>
+        `
+        history3.insertBefore(div, history3.firstChild);
     }
     else{
         alert('Invalid Data');
@@ -75,19 +103,11 @@ document.getElementById('donate-btn3').addEventListener('click', function(){
 
 })
 
+
 // history button triggered
 function historyBtn(){
     document.getElementById('campaign-cards').classList.add('hidden');
-    document.getElementById('history-container').classList.remove('hidden');
-    const date = new Date();
-    const localDate = date.toLocaleString();
-    const div = document.createElement('div');
-    div.innerHTML = 
-    `
-    <h3 class="text-lg font-semibold">1000 Taka is Donated for Flood at Noakhali, Bangladesh</h3>
-    <p class="text-base font-medium">yfyfyfyu</p>
-    `
-    document.getElementById('history-container').prepend(div);
+    document.getElementById('history-container').classList.add('hidden');
 }
 
 // donation button triggered
@@ -96,3 +116,4 @@ function donationBtn(){
     document.getElementById('campaign-cards').classList.remove('hidden');
 }
 
+// confirmation button

@@ -13,10 +13,10 @@ function getTextValueById(id){
 }
 
 // set value inside the element by Id
-// let count = 0;
 function setTextElementById(id, balance){
-    //  count += balance
-    document.getElementById(id).innerText = balance;
+    let count = 0;
+    count = count + balance;
+    document.getElementById(id).innerText = count;
 }
 
 
