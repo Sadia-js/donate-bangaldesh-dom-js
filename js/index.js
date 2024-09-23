@@ -34,7 +34,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
         history1.insertBefore(div, history1.firstChild);
     }
     else{
-        alert('Invalid Number');
+        document.getElementById('invalid-modal-1').showModal();
         document.getElementById('donate-noakhali').value = '';
         return;
     }
@@ -69,7 +69,7 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
         history2.insertBefore(div, history2.firstChild);
     }
     else{
-        alert('Invalid Number');
+        document.getElementById('invalid-modal-2').showModal();
         document.getElementById('donate-feni').value = '';
         return;
     }
@@ -102,7 +102,7 @@ document.getElementById('donate-btn3').addEventListener('click', function(){
         history3.insertBefore(div, history3.firstChild);
     }
     else{
-        alert('Invalid Number');
+        document.getElementById('invalid-modal-3').showModal();
         document.getElementById('donate-quota').value = '';
         return;
     }
