@@ -3,7 +3,6 @@ const history1 = document.getElementById('history-container1');
 const history2 = document.getElementById('history-container2');
 const history3 = document.getElementById('history-container3');
 
-
 let total = 5500;
 
 // For campaign-1 card
@@ -21,6 +20,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
         total = total - getMoney;
         document.getElementById('needed-amount').innerText = total;
         document.getElementById('my_modal_1').showModal();   
+        document.getElementById('donate-noakhali').value = '';
 
         // history
         const date = new Date();
@@ -34,7 +34,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
         history1.insertBefore(div, history1.firstChild);
     }
     else{
-        alert('Invalid Data');
+        alert('Invalid Number');
         document.getElementById('donate-noakhali').value = '';
         return;
     }
@@ -54,7 +54,8 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
         // Updated Balance
         total = total - getMoney;
         document.getElementById('needed-amount').innerText = total;
-        document.getElementById('my_modal_2').showModal();   
+        document.getElementById('my_modal_2').showModal();
+        document.getElementById('donate-feni').value = '';   
 
         // history
         const date = new Date();
@@ -68,7 +69,7 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
         history2.insertBefore(div, history2.firstChild);
     }
     else{
-        alert('Invalid Data');
+        alert('Invalid Number');
         document.getElementById('donate-feni').value = '';
         return;
     }
@@ -87,6 +88,7 @@ document.getElementById('donate-btn3').addEventListener('click', function(){
         total = total - getMoney;
         document.getElementById('needed-amount').innerText = total;   
         document.getElementById('my_modal_3').showModal();   
+        document.getElementById('donate-quota').value = '';
 
         // history
         const date = new Date();
@@ -94,13 +96,13 @@ document.getElementById('donate-btn3').addEventListener('click', function(){
         const div = document.createElement('div');
         div.classList.add('border-2', 'p-4', 'rounded-lg', 'mb-4');
         div.innerHTML = `
-           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Flood at Quota, Bangladesh</h3>
+           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
            <p class="bg-gray-100 p-3 text-base font-medium mt-3 rounded-lg">${localDate}</p>
         `
         history3.insertBefore(div, history3.firstChild);
     }
     else{
-        alert('Invalid Data');
+        alert('Invalid Number');
         document.getElementById('donate-quota').value = '';
         return;
     }
