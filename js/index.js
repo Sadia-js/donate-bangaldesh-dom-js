@@ -3,6 +3,10 @@ const history1 = document.getElementById('history-container1');
 const history2 = document.getElementById('history-container2');
 const history3 = document.getElementById('history-container3');
 
+const title1 = document.getElementById('history-title-1').innerText;
+const title2 = document.getElementById('history-title-2').innerText;
+const title3 = document.getElementById('history-title-3').innerText;
+
 let total = 5500;
 
 // For campaign-1 card
@@ -28,7 +32,7 @@ document.getElementById('donate-btn').addEventListener('click', function(){
         const div = document.createElement('div');
         div.classList.add('border-2', 'p-4', 'rounded-lg', 'mb-4');
         div.innerHTML = `
-           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Flood at Noakhali, Bangladesh</h3>
+           <h3 class="text-lg font-semibold">${getMoney} ${title1}</h3>
            <p class="bg-gray-100 p-3 text-base font-medium mt-3 rounded-lg">${localDate}</p>
         `
         history1.insertBefore(div, history1.firstChild);
@@ -63,7 +67,7 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
         const div = document.createElement('div');
         div.classList.add('border-2', 'p-4', 'rounded-lg', 'mb-4');
         div.innerHTML = `
-           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Flood at Feni, Bangladesh</h3>
+           <h3 class="text-lg font-semibold">${getMoney} ${title2}</h3>
            <p class="bg-gray-100 p-3 text-base font-medium mt-3 rounded-lg">${localDate}</p>
         `
         history2.insertBefore(div, history2.firstChild);
@@ -96,7 +100,7 @@ document.getElementById('donate-btn3').addEventListener('click', function(){
         const div = document.createElement('div');
         div.classList.add('border-2', 'p-4', 'rounded-lg', 'mb-4');
         div.innerHTML = `
-           <h3 class="text-lg font-semibold">${getMoney} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
+           <h3 class="text-lg font-semibold">${getMoney} ${title3}</h3>
            <p class="bg-gray-100 p-3 text-base font-medium mt-3 rounded-lg">${localDate}</p>
         `
         history3.insertBefore(div, history3.firstChild);
