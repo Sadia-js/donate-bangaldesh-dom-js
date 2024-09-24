@@ -63,10 +63,10 @@
             <button id="history-btn" onclick="historyBtn()" class="btn btn-sm md:btn-md">History</button>
         </div>
     </header>
-    <main class="container mx-auto px-4 lg:px-24 mb-24">
+    <main class="container mx-auto px-4 lg:px-24 mb-16">
          <!-- cards campaign here -->
           <section id="campaign-cards">
-            <div class="grid grid-cols-1 gap-6 mt-10">
+            <div class="grid grid-cols-1 gap-6 mt-16">
                 <!-- campaign-1 -->
                 <div class="border-2 hero-content flex-col lg:flex-row shadow-sm rounded-lg">
                   <img
@@ -82,29 +82,27 @@
                         The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.                    
                     </p>
                     <input id="donate-noakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                   <div class="flex justify-center">
-                    <button id="donate-btn" class="btn btn-wide bg-primary hover:bg-lime-200">Donate Now</button>
-                   </div>
-                    <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box flex flex-col gap-3 justify-between items-center">
+                    <div class="flex justify-center">
+                      <button id="donate-btn" class="btn btn-wide bg-primary hover:bg-lime-200">Donate Now</button>
+                      <dialog id="my_modal_1" class="modal sm:modal-middle">
+                        <div class="modal-box max-w-xs md:max-w-md grid grid-cols-1 place-items-center gap-2 text-center">
                           <h3 class="text-xl font-bold">Congrats!</h3>
                           <img src="./assets/coin.png" alt="coin">
-                          <p class="text-base">You have donated for Humankind.</p>
+                          <p>You have donated for Humankind.</p>
                           <h3 class="text-base font-bold">Successfully</h3>
                           <div class="modal-action mt-2">
                             <form method="dialog">
-                              <button class="btn btn-outline font-bold">Close confirmation</button>
+                              <button class="btn btn-outline">Close confirmation</button>
                             </form>
                           </div>
                         </div>
-                      
-                    </dialog>
-                    <dialog id="invalid-modal-1" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box flex flex-col gap-3 justify-between items-center">
-                          <h3 class="text-xl font-bold">Invalid Data</h3>
-                          <i class="fa-solid fa-circle-xmark text-red-600 text-2xl"></i>
-                          <p class="text-base">Please give a Valid Number</p>
-                          <h3 class="text-base font-bold">Try Again</h3>
+                      </dialog>
+
+                    <dialog id="invalid-modal-1" class="modal sm:modal-middle">
+                      <div class="modal-box max-w-xs md:max-w-md grid grid-cols-1 place-items-center gap-1">
+                          <h3 class="text-lg font-bold">Invalid Number</h3>
+                          <i class="fa-solid fa-circle-xmark text-red-600 text-xl"></i>
+                          <p class="text-base">Please try again.</p>
                           <div class="modal-action mt-2">
                             <form method="dialog">
                               <!-- if there is a button in form, it will close the modal -->
@@ -114,6 +112,7 @@
                         </div>
                       
                     </dialog>
+                    </div>  
                   </div>
                 </div>
 
@@ -134,32 +133,31 @@
                     <input id="donate-feni" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                     <div class="flex justify-center">
                       <button id="donate-btn2" class="btn btn-wide bg-primary hover:bg-lime-200">Donate Now</button>
-                      <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box flex flex-col gap-3 justify-between items-center">
-                          <h3 class="text-xl font-bold">Congrats!</h3>
-                          <img src="./assets/coin.png" alt="coin">
-                          <p class="text-base">You have donated for Humankind.</p>
-                          <h3 class="text-base font-bold">Successfully</h3>
-                          <div class="modal-action mt-2">
-                            <form method="dialog">
-                              <button class="btn btn-outline font-bold">Close confirmation</button>
-                            </form>
+                      <dialog id="my_modal_2" class="modal sm:modal-middle">
+                          <div class="modal-box max-w-xs md:max-w-md grid grid-cols-1 place-items-center gap-2 text-center">
+                            <h3 class="text-xl font-bold">Congrats!</h3>
+                            <img src="./assets/coin.png" alt="coin">
+                            <p>You have donated for Humankind.</p>
+                            <h3 class="text-base font-bold">Successfully</h3>
+                            <div class="modal-action mt-2">
+                              <form method="dialog">
+                                <button class="btn btn-outline">Close confirmation</button>
+                              </form>
                           </div>
                         </div>
                       </dialog>
-                      <dialog id="invalid-modal-2" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box flex flex-col gap-3 justify-between items-center">
-                          <h3 class="text-xl font-bold">Invalid Data</h3>
-                          <i class="fa-solid fa-circle-xmark text-red-600 text-2xl"></i>
-                          <p class="text-base">Please give a Valid Number</p>
-                          <h3 class="text-base font-bold">Try Again</h3>
+                      <dialog id="invalid-modal-2" class="modal sm:modal-middle">
+                        <div class="modal-box max-w-xs md:max-w-md grid grid-cols-1 place-items-center gap-1">
+                          <h3 class="text-lg font-bold">Invalid Number</h3>
+                          <i class="fa-solid fa-circle-xmark text-red-600 text-xl"></i>
+                          <p class="text-base">Please try again.</p>
                           <div class="modal-action mt-2">
                             <form method="dialog">
                               <button class="btn btn-outline font-bold">Close</button>
                             </form>
                           </div>
                         </div>               
-                    </dialog>
+                      </dialog>
                     </div>                  
                   </div>
                 </div>
@@ -181,33 +179,31 @@
                     <input id="donate-quota" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                     <div class="flex justify-center">
                       <button id="donate-btn3" class="btn btn-wide bg-primary hover:bg-lime-200">Donate Now</button>
-                      <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box flex flex-col gap-3 justify-between items-center">
+                      <dialog id="my_modal_3" class="modal sm:modal-middle">
+                        <div class="modal-box max-w-xs md:max-w-md grid grid-cols-1 place-items-center gap-2 text-center">
                           <h3 class="text-xl font-bold">Congrats!</h3>
                           <img src="./assets/coin.png" alt="coin">
-                          <p class="text-base">You have donated for Humankind.</p>
+                          <p>You have donated for Humankind.</p>
                           <h3 class="text-base font-bold">Successfully</h3>
                           <div class="modal-action mt-2">
                             <form method="dialog">
-                              <button class="btn btn-outline font-bold">Close confirmation</button>
+                              <button class="btn btn-outline">Close confirmation</button>
                             </form>
                         </div>
                         </div>
                       </dialog>
-                      <dialog id="invalid-modal-3" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box flex flex-col gap-3 justify-between items-center">
-                          <h3 class="text-xl font-bold">Invalid Data</h3>
-                          <i class="fa-solid fa-circle-xmark text-red-600 text-2xl"></i>
-                          <p class="text-base">Please give a Valid Number</p>
-                          <h3 class="text-base font-bold">Try Again</h3>
+                      <dialog id="invalid-modal-3" class="modal sm:modal-middle">
+                        <div class="modal-box max-w-xs md:max-w-md grid grid-cols-1 place-items-center gap-1">
+                          <h3 class="text-lg font-bold">Invalid Number</h3>
+                          <i class="fa-solid fa-circle-xmark text-red-600 text-xl"></i>
+                          <p class="text-base">Please try again.</p>
                           <div class="modal-action mt-2">
                             <form method="dialog">
-                              <button class="btn btn-outline font-bold">Close</button>
+                              <button class="btn btn-outline">Close</button>
                             </form>
                           </div>
-                        </div>
-                      
-                    </dialog>
+                        </div>          
+                      </dialog>
                     </div>
                   </div>
                 </div>
